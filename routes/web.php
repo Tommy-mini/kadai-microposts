@@ -10,7 +10,5 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('signup', 'Auth/RegisterController@showRegistrationForm')->name('siginup.get');
+Route::post('signup', 'Auth/RegisterController@register')->name('siginup.post');
